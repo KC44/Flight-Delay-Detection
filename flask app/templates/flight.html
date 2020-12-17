@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ML API</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Flight Delay Detection</title>
+</head>
+
+<body>
+    <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+        <div class="wrapper wrapper--w790">
+            <div class="card card-5">
+                <div class="card-heading">
+                    <h2 class="title">Flight Delay Detection</h2>
+                </div>
+                <div class="card-body">
+                    <form action="http://localhost:9000/login" method="post"/>
+<div class="form-row">
+                            <div class="name">Year</div>
+                            <div class="value">
+                                <div class="input-group">
+											<input class="input--style-5" type="number"  name="yr" placeholder="Enter year " required="required" />
+
+                                </div>
+                            </div>
+                        </div>
+<div class="form-row">
+                            <div class="name">Month</div>
+                            <div class="value">
+                                <div class="input-group">
+											<input class="input--style-5" type="number"  name="mo" placeholder="Enter month" required="required" />
+
+                                </div>
+                            </div>
+                        </div>
+<div class="form-row">
+                            <div class="name">Date of the month</div>
+                            <div class="value">
+                                <div class="input-group">
+											<input class="input--style-5" type="number"  name="dm" placeholder="Enter day of month" required="required" />
+
+                                </div>
+                            </div>
+                        </div>
+<div class="form-row">
+                            <div class="name">Day of the Week</div>
+                            <div class="value">
+                                <div class="input-group">
+											<input class="input--style-5" type="number"  name="dw" placeholder="Enter date of week" required="required" />
+
+                                </div>
+                            </div>
+                        </div>
+<div class="form-row">
+                            <div class="name">Flight Number</div>
+                            <div class="value">
+                                <div class="input-group">
+											<input class="input--style-5" type="number"  name="fn" placeholder="Enter flight number" required="required" />
+
+                                </div>
+                            </div>
+                        </div>
+<div class="form-row">
+                            <div class="name">Scheduled Dept Time</div>
+                            <div class="value">
+                                <div class="input-group">
+											<input class="input--style-5" type="number"  name="sd" placeholder="Enter scheduled dept time" required="required" />
+
+                                </div>
+                            </div>
+                        </div>
+<div class="form-row">
+                            <div class="name">Actual Dept Time</div>
+                            <div class="value">
+                                <div class="input-group">
+											<input class="input--style-5" type="number"  name="ad" placeholder="Enter actual dept time" required="required" />
+
+                                </div>
+                            </div>
+                        </div>
+<div class="form-row">
+                            <div class="name">Scheduled Arrival Time</div>
+                            <div class="value">
+                                <div class="input-group">
+											<input class="input--style-5" type="number"  name="sa" placeholder="Enter scheduled arrival time" required="required" />
+
+                                </div>
+                            </div>
+                        </div>
+<div class="form-row">
+                            <div class="name">Actual Arrival Time</div>
+                            <div class="value">
+                                <div class="input-group">
+											<input class="input--style-5" type="number"  name="aa" placeholder="Enter actual arrival time" required="required" />
+
+                                </div>
+                            </div>
+                        </div>
+<div class="form-row">
+                            <div class="name">Distance</div>
+                            <div class="value">
+                                <div class="input-group">
+											<input class="input--style-5" type="number"  name="di" placeholder="Enter distance" required="required" />
+
+                                </div>
+                            </div>
+                        </div>
+<div class="form-row">
+                            <div class="name">Arrival Delay</div>
+                            <div class="value">
+                                <div class="input-group">
+											<input class="input--style-5" type="number"  name="de" placeholder="Enter arrival delay" required="required" />
+
+                                </div>
+                            </div>
+                        </div>
+<div class="form-row">
+                            <div class="name">Choose Origin</div>
+                            <div class="value">
+                                <div class="input-group">
+                                <label form="origin"></label>
+<select name="o">
+<option value ="ATL">ATL</option>
+<option value ="DTW">DTW</option>
+<option value ="JFK">JFK</option>
+<option value ="MSP">MSP</option>
+<option value ="SEA">SEA</option>
+</select>
+                                </div>
+                            </div>
+                        </div>
+<div class="form-row">
+                            <div class="name">Choose Destination</div>
+                            <div class="value">
+                                <div class="input-group">
+                                <label form="destination"></label>
+<select name="d">
+<option value ="SEA">SEA</option>
+<option value ="MSP">MSP</option>
+<option value ="DTW">DTW</option>
+<option value ="ATL">ATL</option>
+<option value ="JFK">JFK</option>
+</select>
+                                </div>
+                            </div>
+                        </div>
+                        <center>
+                        <div>
+                            <button class="btn btn--radius-2 btn--red" type="submit">Predict</button>
+                        </div>
+                        </center>
+                        </form>
+                        <br>
+                        <br>
+                    <center>
+					{{ label }}
+          </center>
+                </div>
+	
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
