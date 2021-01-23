@@ -8,6 +8,7 @@ def hello_world():
     return render_template('flight.html')
 @app.route('/login',methods=["POST"])
 def login():
+    c=request.form["c"]
     d=request.form["d"]
     if(d=="ATL"):
         d1,d2,d3,d4,d5=1,0,0,0,0
@@ -40,12 +41,15 @@ def login():
     sa=request.form["sa"]
     aa=request.form["aa"]
     di=request.form["di"]
-    de=request.form["de"]
+    de=int(sa)-int(aa)
     delay=[[d1,d2,d3,d4,d5,o1,o2,o3,o4,o5,int(yr),int(mo),int(dm),int(dw),int(fn),int(sd),int(ad),int(sa),int(aa),int(di),int(de)]]
-    
     p=model.predict(delay)
     p=int(p)
-    if(p==1):
+    if(c=="SNO"):
+        return render_template('flight.html',label='The Flight is delayed due to Snowy weather')
+    elif(c=="RAI"):
+        return render_template('flight.html',label='The Flight is delayed due to Rain')
+    elif(p==1):
         return render_template('flight.html',label='The Flight is Delayed')
     else:
         return render_template('flight.html',label='The Flight is On Time')
